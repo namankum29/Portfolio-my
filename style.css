@@ -1,0 +1,529 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: #fff;
+    /* margin-inline: 50px; */
+}
+
+.hero{
+        height: 80vh;
+    /* width: 100vw; */
+    /* background-image: url(Images/my.png); */
+    background-size: 40%; /* Reduce the size to 50% of its original size */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center;
+    margin-inline: 20px;
+    margin-block: 40px;
+    display: flex;
+}
+
+.container{
+    top: 67px;
+    position: relative;
+}
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keeps it above other elements */
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: for a shadow effect */
+}
+.nav-bar.scrolled {
+    background-color: #333536b3; /* Change to your desired color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+nav{
+    display: flex;
+    align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 25px;
+
+}
+nav ul li{
+    display: inline-block;
+    gap: 5px;
+    color: #fff;
+    list-style: none;
+    margin: 10px 20px;
+    padding: 10px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0px;
+    height: 3px;
+    background: brown;
+    transition: 0.5s;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+nav ul li a:hover::after{
+   width: 100%;  
+}
+.content{
+    margin: 55px;
+    padding: 10px;
+}
+
+.about-container{
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 20px;
+    margin-block: 40px;
+}
+
+.about-section img{
+    height: 425px;
+    width: 450px;
+    margin: 23px 10px 23px 65px;
+    border-radius: 15px;
+}
+
+.about-section-data{justify-content: center;
+    justify-content: center;
+    /* display: flex; */
+    position: relative;
+    right: 0%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.about-link{
+    margin-top: 30px;
+}
+.about-link a{
+  color: white;
+  margin-right: 10px;
+
+}
+.about-content span {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.gap-about{
+
+    margin-top: 35px;
+}
+
+.skills, .experience, .education {
+    display: none; /* Initially hide all sections */
+}
+.active {
+    display: block; /* Show the active section */
+}
+.about-link span{
+    margin-right: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+.about-link span:hover {
+    text-decoration: underline;
+}
+
+
+.tab-content{
+   margin-top: 20px;
+}
+.my-services{
+    margin-inline: 20px;
+    margin-block: 40px;
+}
+.serivec-head{
+    margin: 15px;
+    padding: 15px;
+    font-size: 35px;
+}
+.service-cards{
+    display: flex;
+}
+.service-card-0{
+    background-color: rgb(28, 25, 25);
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: perspective(1000px) translateZ(0);
+}
+
+.service-card-0:hover{
+    background-color: rgb(177, 52, 52);
+    cursor: pointer;
+    transform: perspective(1000px) scale(1.1) translateZ(10px);
+    
+}
+/* .my-work{
+    margin: 30px;
+}
+.work-head{
+    margin: 15px;
+    padding: 15px;
+    font-size: 35px;
+}
+.work-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+}
+.work-card0 ,.work-card1 ,.work-card2{
+    
+    margin: 15px;
+    
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: perspective(1000px) translateZ(0);
+}
+
+.work-card-content img{
+width: 100%;
+object-fit: fill;
+border-radius: 10px;
+}
+
+.layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background : linear-gradient(rgba(0,0,0,0.6) ,#ff004f) ;
+    width: 100%;
+    height: 0;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 40px;
+    font-size: 14px;
+    overflow: hidden;
+    align-items: center;
+    transition: height 0.5s;
+
+} */
+.my-work {
+    margin-inline: 20px;
+    margin-block: 40px;
+}
+
+.work-head {
+    margin: 15px;
+    padding: 15px;
+    font-size: 35px;
+}
+
+.work-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+}
+
+.work-card0, .work-card1, .work-card2 {
+    margin: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: perspective(1000px) translateZ(0);
+}
+
+.work-card-content {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.work-card-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: filter 0.5s ease-in-out;
+}
+
+/* Background effect */
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centering text */
+    padding: 20px; /* Ensure text doesn't get cut off */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Gradient animation */
+.layer::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    transition: height 0.5s ease-in-out;
+}
+
+/* Ensure h1, h3, and p inside layer are fully visible */
+.layer h1, .layer h3, .layer p {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    margin-right: 30px;
+}
+
+/* Fix h1 styling */
+.layer h1 {
+    font-size: 30px;  /* Increase font size */
+    font-weight: bold; /* Make it bold */
+    color: white;      /* Ensure text is clearly visible */
+    margin-bottom: 10px; /* Add some space below */
+}
+
+/* Hover Effects */
+.work-card0:hover .layer,
+.work-card1:hover .layer,
+.work-card2:hover .layer {
+    opacity: 1;
+}
+
+.work-card0:hover .layer::before,
+.work-card1:hover .layer::before,
+.work-card2:hover .layer::before {
+    height: 100%;
+}
+
+/* Ensure all text (including h1) appears */
+.work-card0:hover .layer h1,
+.work-card0:hover .layer h3,
+.work-card0:hover .layer p,
+.work-card1:hover .layer h1,
+.work-card1:hover .layer h3,
+.work-card1:hover .layer p,
+.work-card2:hover .layer h1,
+.work-card2:hover .layer h3,
+.work-card2:hover .layer p {
+    opacity: 1;
+}
+
+/* Dim the background image on hover */
+.work-card0:hover .work-card-content img,
+.work-card1:hover .work-card-content img,
+.work-card2:hover .work-card-content img {
+    filter: brightness(50%);
+}
+
+
+.see-more{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin: 20px;
+}
+
+.see-more button{
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: #f01a1a;
+}
+.see-more button:hover{
+    cursor: pointer;
+}
+
+.contact-me{
+    display: flex;
+    justify-content:space-around;
+    margin: 50px;
+    padding: 10px;
+}
+
+.contact-right form input {
+    padding: 10px;
+    margin: 5px;
+    width: 150%;
+    border-radius: 10px;
+}
+.contact-right form textarea{
+    padding: 10px;
+    margin: 5px;
+    width: 150%;
+    border-radius: 10px;
+}
+
+.contact-right form button{
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
+.dwld-cv{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin: 30px 0px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: #f01a1a;
+    text-decoration: none;
+}
+.dwld-cv:hover{
+    cursor: pointer;
+}
+
+.card-icon img{
+    height: 50px;
+    margin: 10px;
+}
+.card-content h2, .card-content p{
+    margin: 10px;
+}
+.circle{
+    /* background-color: aqua; */
+    height: 50%;
+    width: 35%;
+    margin-inline: 180px;
+    margin-top: 65px;
+}
+
+.my-hero-photo img{
+    height: 365px;
+    width: 100%;
+    border-radius: 185px;
+}
+
+
+
+/* ---------for mobile------- */
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        height: auto;
+        margin: 10px;
+        background-size: cover;
+    }
+
+    nav {
+        flex-direction: column;
+        margin: 10px 0;
+        position: relative;
+    }
+
+    .nav-toggle {
+        display: block;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #444;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        border-radius: 5px;
+        z-index: 1000;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px;
+        text-align: center;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-section img {
+        width: 90%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .about-section-data {
+        text-align: center;
+    }
+
+    .service-cards {
+        flex-direction: column;
+    }
+
+    .service-card-0 {
+        width: 100%;
+    }
+
+    .work-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-right form input,
+    .contact-right form textarea {
+        width: 100%;
+    }
+
+    .circle {
+        width: 80%;
+        margin-inline: auto;
+        margin-top: 20px;
+    }
+
+    .my-hero-photo img {
+        width: 80%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .see-more button,
+    .dwld-cv {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
